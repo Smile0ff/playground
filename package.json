@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --inline --colors --hot --port 3000 --env=\"development\" --history-api-fallback --compress --config webpack",
-    "prod": "webpack-dev-server --colors --progress --env=\"production\" --config webpack"
+    "dev": "webpack-dev-server --inline --colors --hot --port 3000 --env=\"development\" --history-api-fallback --config webpack",
+    "prod": "webpack --colors --progress --env=\"production\" --config webpack"
   },
   "keywords": [],
   "author": "",
