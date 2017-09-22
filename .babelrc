@@ -1,0 +1,15 @@
+{
+  "presets": ["env", "stage-2", "react"],
+  "plugins": [
+    "react-html-attrs",
+    "transform-decorators-legacy",
+    "transform-async-to-generator",
+    "transform-class-properties",
+    ["transform-runtime", {
+        "helpers": false,
+        "polyfill": false,
+        "regenerator": true,
+        "moduleName": "babel-runtime"
+    }]
+  ]
+}
