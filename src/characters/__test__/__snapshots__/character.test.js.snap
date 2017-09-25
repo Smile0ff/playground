@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render character component 1`] = `
+<article
+  className="character"
+>
+  <h2>
+    Obi-Wan Kenobi
+  </h2>
+  <p>
+    Gender: 
+    male
+  </p>
+  <p>
+    Birthday: 
+    57BBY
+  </p>
+</article>
+`;

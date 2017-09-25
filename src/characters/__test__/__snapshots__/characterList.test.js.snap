@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render characterList 1`] = `
+<section
+  className="characters-list"
+>
+  <h1>
+    Star Wars Characters
+  </h1>
+  <article
+    className="character"
+  >
+    <h2>
+      Obi-Wan Kenobi
+    </h2>
+    <p>
+      Gender: 
+      male
+    </p>
+    <p>
+      Birthday: 
+      57BBY
+    </p>
+  </article>
+  <article
+    className="character"
+  >
+    <h2>
+      Obi-Wan Kenobi 2
+    </h2>
+    <p>
+      Gender: 
+      male
+    </p>
+    <p>
+      Birthday: 
+      57BBY
+    </p>
+  </article>
+</section>
+`;
