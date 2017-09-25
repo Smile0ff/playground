@@ -1,9 +1,9 @@
 const routes = {
     index: '/',
     characters: '/characters',
-    character: '/characters/:id/:name',
+    character: '/characters/:name',
     planets: '/planets',
-    planet: '/planets/:id/:name'
+    planet: '/planets/:name'
 };
 
 export default routes;

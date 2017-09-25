@@ -13,7 +13,7 @@ class CharacterList extends Component{
     render(){
         const { characters } = this.props;
         const data = characters.data || {};
-        const results = data.results || []; 
+        const results = data.results || [];
 
         const mappedResults = results.map((res) => (<Character key={ res.name } character={ res } />));
 

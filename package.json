@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "jest --watch --verbose",
     "dev": "webpack-dev-server --inline --colors --hot --port 3000 --env=\"development\" --history-api-fallback --config webpack",
     "prod": "webpack --colors --progress --env=\"production\" --config webpack"
   },
@@ -13,6 +14,7 @@
   "devDependencies": {
     "autoprefixer": "^7.1.4",
     "babel-core": "^6.26.0",
+    "babel-jest": "^21.0.2",
     "babel-loader": "^7.1.2",
     "babel-plugin-react-html-attrs": "^2.0.0",
     "babel-plugin-transform-async-to-generator": "^6.24.1",
@@ -38,6 +40,7 @@
   "dependencies": {
     "axios": "^0.16.2",
     "babel-runtime": "^6.26.0",
+    "jest": "^21.1.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
@@ -45,6 +48,7 @@
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
     "redux-actions": "^2.2.1",
-    "redux-saga": "^0.15.6"
+    "redux-saga": "^0.15.6",
+    "redux-saga-test-plan": "^3.2.0"
   }
 }

@@ -4,38 +4,37 @@ import { PENDING, FULFILLED, REJECTED } from '../../shared/constants/common';
 
 import { getCharacters } from '../api/charactersApi';
 
-function* loadCharacters(action){
-    
+export function* loadCharacters(action){
+
     yield put({
         type: LOAD_CHARACTERS + PENDING,
         payload: { loading: true }
     });
 
-    const result = yield call(getCharacters);
-    const { data, status } = result;
+    try{
 
-    if(status === 200){
+      const { data } = yield call(getCharacters);
 
-        yield put({
-            type: LOAD_CHARACTERS + FULFILLED,
-            payload: {
-                loading: false,
-                data,
-                err: null
-            }
-        });
+      yield put({
+          type: LOAD_CHARACTERS + FULFILLED,
+          payload: {
+              loading: false,
+              data,
+              err: null
+          }
+      });
 
-    } else{
-        const err = new Error('Characters error');
+    } catch(err){
 
-        yield put({
-            type: LOAD_CHARACTERS + REJECTED,
-            pyaload: {
-                loading: false,
-                data: {},
-                err
-            }
-        });
+      yield put({
+          type: LOAD_CHARACTERS + REJECTED,
+          payload: {
+              loading: false,
+              data: {},
+              err: err
+          }
+      });
+
     }
 
 }
@@ -43,4 +42,3 @@ function* loadCharacters(action){
 export function* watchGetCharacters(){
     yield takeEvery(LOAD_CHARACTERS, loadCharacters)
 }
-
